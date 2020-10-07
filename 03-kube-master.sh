@@ -6,10 +6,9 @@ if [ ! -f ${MASTER_BINTEMPDIR}kube-apiserver ] ; then
   exit 1
 fi
 
-cd ${MASTER_CONFTEMPDIR}
-
 for master_node_ip in ${MASTER_NODE_IPS} ; do
 
+cd ${MASTER_CONFTEMPDIR}
 cat > ${master_node_ip}.apiserver.service <<EOF
 [Unit]
 Description=Kubernetes API Server
