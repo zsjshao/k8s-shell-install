@@ -127,6 +127,7 @@ vim kube-flannel.yml
       "Network": "172.20.0.0/16",
       "Backend": {
         "Type": "vxlan"
+        "Directrouting": "true"
       }
     }
 kubectl apply -f kube-flannel.yml
@@ -148,6 +149,7 @@ vim canal.yaml
       "Network": "172.20.0.0/16",
       "Backend": {
         "Type": "vxlan"
+        "Directrouting": "true"
       }
     }
 kubectl apply -f canal.yaml
